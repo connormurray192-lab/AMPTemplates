@@ -69,8 +69,10 @@ Two dead ends, both verified on AMP 2.8:
    - **CurseForge API Key** – paste your key.
 3. **Configuration → Java and Memory**
    - Tick **Accept Minecraft EULA**.
-   - Pick the **Java Version** to match the pack's Minecraft version
-     (1.20.5+ → 21, 1.17–1.20.4 → 17, 1.12–1.16 → 8). Star Technology (MC 1.20.1) → Java 17.
+   - Leave **Java Version** on **Automatic**. The server starts on a sensible version and, if the
+     pack's mod loader is built for a newer Java, it downloads that runtime and retries by itself
+     — ATM11, for example, needs Java 25 despite being a 1.21 pack, which no rule based on the
+     Minecraft version would predict. Override it only for very old packs.
    - Set memory (most big packs want 6–8 GB max).
 4. Click **Update** on the instance. Watch the console: it downloads mc-image-helper, the Java
    runtime, then installs the modpack (first install can take several minutes).
@@ -92,9 +94,10 @@ file URL). Your world and settings are kept.
 - **"Files require manual download"** — a few pack authors disallow automated distribution of
   certain mods. mc-image-helper will list the offending files in the console with their project
   pages; download them manually and place them in the pack's `mods` folder, then Update again.
-- **Wrong Java version** — if the server crashes immediately with class-file or module errors,
-  the Java version doesn't match the pack. Change it and click Update (the new runtime is
-  fetched automatically).
+- **Wrong Java version** — normally handled for you: on `UnsupportedClassVersionError` the
+  launcher works out the required release from the reported class file version, downloads that
+  runtime and retries, remembering it for future starts. If you pinned a version manually and it
+  is wrong, switch back to **Automatic**.
 - **Memory** — `-Xms`/`-Xmx` from the settings are applied both to jar launches and to Forge's
   `run.sh` (via `user_jvm_args.txt`).
 - The launch entry point is read from `.install-results.env` (written by mc-image-helper);
