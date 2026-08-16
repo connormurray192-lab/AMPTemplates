@@ -20,6 +20,7 @@ Temurin Java runtimes, so nothing needs to be installed on the host.
 | `moddedminecraft.kvp` | Main template definition |
 | `moddedminecraftconfig.json` | Settings shown in the AMP web UI |
 | `moddedminecraftmetaconfig.json` | Maps settings into `server.properties` |
+| — | Settings cover the modpack, Java and memory, and most of `server.properties`, grouped as Server, Gameplay and Difficulty, World, Players and Permissions, Performance and Resource Pack. Anything not listed can be added via **Additional Server Properties**. |
 | `moddedminecraftports.json` | Port definition (TCP 25565) |
 | `moddedminecraftupdates.json` | Update stages: installs mc-image-helper, Java, and the modpack |
 | `manifest.json` | Marks the folder as an AMP `AppTemplates` repository so AMP discovers it |

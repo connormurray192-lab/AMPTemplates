@@ -221,6 +221,135 @@
         "IncludeInCommandLine": false
     },
     {
+        "DisplayName": "Simulation Distance",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Distance in chunks around each player where entities and blocks stay active. Lowering this helps a struggling modded server far more than view distance does.",
+        "Keywords": "simulation,distance,ticking,performance",
+        "FieldName": "simulation-distance",
+        "ParamFieldName": "simulation-distance",
+        "InputType": "number",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "EnumValues": {},
+        "Suffix": "chunks",
+        "MinValue": "3",
+        "MaxValue": "32",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Network Compression Threshold",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Packets larger than this many bytes get compressed. -1 disables compression entirely, 0 compresses everything.",
+        "Keywords": "network,compression,threshold,bandwidth",
+        "FieldName": "network-compression-threshold",
+        "ParamFieldName": "network-compression-threshold",
+        "InputType": "number",
+        "DefaultValue": "256",
+        "Placeholder": "256",
+        "EnumValues": {},
+        "Suffix": "bytes",
+        "MinValue": "-1",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Player Idle Timeout",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Kick players after this many minutes of inactivity. 0 never kicks.",
+        "Keywords": "idle,timeout,afk,kick",
+        "FieldName": "player-idle-timeout",
+        "ParamFieldName": "player-idle-timeout",
+        "InputType": "number",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {},
+        "Suffix": "minutes",
+        "MinValue": "0",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Show In Server List",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Reply to server list pings. Turning this off makes the server appear offline in the multiplayer list.",
+        "Keywords": "status,ping,list,visible",
+        "FieldName": "enable-status",
+        "ParamFieldName": "enable-status",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Hide Online Players",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Leave the player sample out of server list responses.",
+        "Keywords": "hide,players,privacy,list",
+        "FieldName": "hide-online-players",
+        "ParamFieldName": "hide-online-players",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Enforce Secure Profile",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Require players to have a Mojang-signed chat profile. Turn this off if players on offline or proxied setups cannot join.",
+        "Keywords": "secure,profile,chat,signing",
+        "FieldName": "enforce-secure-profile",
+        "ParamFieldName": "enforce-secure-profile",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Prevent Proxy Connections",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Reject players whose connection appears to come via a VPN or proxy.",
+        "Keywords": "proxy,vpn,prevent,connections",
+        "FieldName": "prevent-proxy-connections",
+        "ParamFieldName": "prevent-proxy-connections",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Accept Player Transfers",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Allow players to be transferred in from another server (Minecraft 1.20.5 and later).",
+        "Keywords": "transfer,accepts,cross-server",
+        "FieldName": "accepts-transfers",
+        "ParamFieldName": "accepts-transfers",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
         "DisplayName": "Difficulty",
         "Category": "Modded Minecraft:stadia_controller",
         "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
@@ -304,6 +433,152 @@
         "IncludeInCommandLine": false
     },
     {
+        "DisplayName": "Default Game Mode",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Game mode applied to players joining for the first time.",
+        "Keywords": "gamemode,survival,creative,adventure",
+        "FieldName": "gamemode",
+        "ParamFieldName": "gamemode",
+        "InputType": "enum",
+        "DefaultValue": "survival",
+        "EnumValues": {
+            "survival": "Survival (default)",
+            "creative": "Creative",
+            "adventure": "Adventure",
+            "spectator": "Spectator"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Force Game Mode",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Put players back into the default game mode every time they join.",
+        "Keywords": "force,gamemode",
+        "FieldName": "force-gamemode",
+        "ParamFieldName": "force-gamemode",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Hardcore",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Players are permanently banned from the world when they die, and difficulty is locked to hard.",
+        "Keywords": "hardcore,permadeath",
+        "FieldName": "hardcore",
+        "ParamFieldName": "hardcore",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Allow Nether",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Enable the Nether. Some skyblock and expert packs deliberately disable it.",
+        "Keywords": "nether,dimension,portal",
+        "FieldName": "allow-nether",
+        "ParamFieldName": "allow-nether",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Spawn Monsters",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Allow hostile mobs to spawn.",
+        "Keywords": "spawn,monsters,hostile,mobs",
+        "FieldName": "spawn-monsters",
+        "ParamFieldName": "spawn-monsters",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Spawn Animals",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Allow passive animals to spawn.",
+        "Keywords": "spawn,animals,passive,mobs",
+        "FieldName": "spawn-animals",
+        "ParamFieldName": "spawn-animals",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Spawn Villagers",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Allow villagers to spawn.",
+        "Keywords": "spawn,npc,villagers",
+        "FieldName": "spawn-npcs",
+        "ParamFieldName": "spawn-npcs",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Broadcast Console To Ops",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Show the output of console commands to online operators.",
+        "Keywords": "broadcast,console,ops",
+        "FieldName": "broadcast-console-to-ops",
+        "ParamFieldName": "broadcast-console-to-ops",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Watchdog Timeout",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay and Difficulty:videogame_asset:3",
+        "Description": "Kill the server if a single tick takes longer than this many milliseconds. Heavy modpacks routinely stall past the default while generating chunks, so -1 (which disables the watchdog) is a common choice for modded servers.",
+        "Keywords": "watchdog,tick,timeout,crash,freeze,hang",
+        "FieldName": "max-tick-time",
+        "ParamFieldName": "max-tick-time",
+        "InputType": "number",
+        "DefaultValue": "60000",
+        "Placeholder": "60000",
+        "EnumValues": {},
+        "Suffix": "ms",
+        "MinValue": "-1",
+        "IncludeInCommandLine": false
+    },
+    {
         "DisplayName": "World Name",
         "Category": "Modded Minecraft:stadia_controller",
         "Subcategory": "World:public:4",
@@ -326,6 +601,285 @@
         "FieldName": "level-seed",
         "ParamFieldName": "level-seed",
         "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Level Type",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "World:public:4",
+        "Description": "World generation type used when creating a new world. Most modpacks provide their own generation, so leave this alone unless the pack says otherwise.",
+        "Keywords": "level,type,generation,flat,amplified",
+        "FieldName": "level-type",
+        "ParamFieldName": "level-type",
+        "InputType": "enum",
+        "DefaultValue": "minecraft:normal",
+        "EnumValues": {
+            "minecraft:normal": "Normal (default)",
+            "minecraft:flat": "Superflat",
+            "minecraft:large_biomes": "Large Biomes",
+            "minecraft:amplified": "Amplified",
+            "minecraft:single_biome_surface": "Single Biome"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Generate Structures",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "World:public:4",
+        "Description": "Generate villages, strongholds, mineshafts and other structures in new chunks.",
+        "Keywords": "structures,villages,generate",
+        "FieldName": "generate-structures",
+        "ParamFieldName": "generate-structures",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Generator Settings",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "World:public:4",
+        "Description": "Advanced JSON generator settings, used mainly with superflat or custom world types. Leave empty unless the pack tells you otherwise.",
+        "Keywords": "generator,settings,custom,superflat",
+        "FieldName": "generator-settings",
+        "ParamFieldName": "generator-settings",
+        "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Maximum World Size",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "World:public:4",
+        "Description": "World border limit in blocks measured from the centre of the world.",
+        "Keywords": "world,size,border,limit",
+        "FieldName": "max-world-size",
+        "ParamFieldName": "max-world-size",
+        "InputType": "number",
+        "DefaultValue": "29999984",
+        "Placeholder": "29999984",
+        "EnumValues": {},
+        "MinValue": "1",
+        "MaxValue": "29999984",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Operator Permission Level",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Players and Permissions:group:5",
+        "Description": "What server operators are allowed to do.",
+        "Keywords": "op,permission,level,admin",
+        "FieldName": "op-permission-level",
+        "ParamFieldName": "op-permission-level",
+        "InputType": "enum",
+        "DefaultValue": "4",
+        "EnumValues": {
+            "1": "1 - Bypass spawn protection",
+            "2": "2 - Singleplayer cheat commands",
+            "3": "3 - Multiplayer management commands",
+            "4": "4 - Full access (default)"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Function Permission Level",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Players and Permissions:group:5",
+        "Description": "Permission level used by datapack functions and command blocks.",
+        "Keywords": "function,permission,datapack,commandblock",
+        "FieldName": "function-permission-level",
+        "ParamFieldName": "function-permission-level",
+        "InputType": "enum",
+        "DefaultValue": "2",
+        "EnumValues": {
+            "1": "1",
+            "2": "2 (default)",
+            "3": "3",
+            "4": "4"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Enforce Whitelist",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Players and Permissions:group:5",
+        "Description": "Kick players who are already online when they get removed from the whitelist.",
+        "Keywords": "whitelist,enforce,kick",
+        "FieldName": "enforce-whitelist",
+        "ParamFieldName": "enforce-whitelist",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Log IP Addresses",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Players and Permissions:group:5",
+        "Description": "Include player IP addresses in the server log.",
+        "Keywords": "log,ips,privacy",
+        "FieldName": "log-ips",
+        "ParamFieldName": "log-ips",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Rate Limit",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Players and Permissions:group:5",
+        "Description": "Disconnect a player who sends more than this many packets per second. 0 disables the limit.",
+        "Keywords": "rate,limit,packets,spam",
+        "FieldName": "rate-limit",
+        "ParamFieldName": "rate-limit",
+        "InputType": "number",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {},
+        "MinValue": "0",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Entity Broadcast Range",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Performance:speed:6",
+        "Description": "How far entities are sent to clients, as a percentage of the default. Lowering it cuts network and client load on busy modded servers.",
+        "Keywords": "entity,broadcast,range,performance",
+        "FieldName": "entity-broadcast-range-percentage",
+        "ParamFieldName": "entity-broadcast-range-percentage",
+        "InputType": "number",
+        "DefaultValue": "100",
+        "Placeholder": "100",
+        "EnumValues": {},
+        "Suffix": "%",
+        "MinValue": "10",
+        "MaxValue": "1000",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Sync Chunk Writes",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Performance:speed:6",
+        "Description": "Write chunks to disk synchronously. Turning it off can improve performance but risks world corruption on an unclean shutdown.",
+        "Keywords": "chunk,writes,sync,disk,performance",
+        "FieldName": "sync-chunk-writes",
+        "ParamFieldName": "sync-chunk-writes",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Use Native Transport",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Performance:speed:6",
+        "Description": "Use optimised Linux packet handling.",
+        "Keywords": "native,transport,epoll,performance",
+        "FieldName": "use-native-transport",
+        "ParamFieldName": "use-native-transport",
+        "InputType": "checkbox",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Max Chained Neighbour Updates",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Performance:speed:6",
+        "Description": "Limit on consecutive neighbour block updates before the remainder are skipped. Guards against redstone or mod machinery locking up the server.",
+        "Keywords": "neighbour,updates,redstone,chain",
+        "FieldName": "max-chained-neighbor-updates",
+        "ParamFieldName": "max-chained-neighbor-updates",
+        "InputType": "number",
+        "DefaultValue": "1000000",
+        "Placeholder": "1000000",
+        "EnumValues": {},
+        "MinValue": "-1",
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Resource Pack URL",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Resource Pack:texture:7",
+        "Description": "Direct download URL for a server resource pack.",
+        "Keywords": "resource,pack,url,texture",
+        "FieldName": "resource-pack",
+        "ParamFieldName": "resource-pack",
+        "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Resource Pack SHA-1",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Resource Pack:texture:7",
+        "Description": "SHA-1 hash of the resource pack file. Strongly recommended, otherwise clients may not cache it correctly.",
+        "Keywords": "resource,pack,sha1,hash",
+        "FieldName": "resource-pack-sha1",
+        "ParamFieldName": "resource-pack-sha1",
+        "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Resource Pack Prompt",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Resource Pack:texture:7",
+        "Description": "Message shown to players when they are asked to accept the resource pack.",
+        "Keywords": "resource,pack,prompt,message",
+        "FieldName": "resource-pack-prompt",
+        "ParamFieldName": "resource-pack-prompt",
+        "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Require Resource Pack",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Resource Pack:texture:7",
+        "Description": "Players who decline the resource pack are kicked from the server.",
+        "Keywords": "resource,pack,require,force",
+        "FieldName": "require-resource-pack",
+        "ParamFieldName": "require-resource-pack",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Additional Server Properties",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Advanced:build:8",
+        "Description": "Extra lines written verbatim into server.properties, one per line, for anything not covered above - including properties added by newer Minecraft versions or by mods. Format: setting=value",
+        "Keywords": "additional,custom,properties,extra",
+        "FieldName": "UserSettings",
+        "ParamFieldName": "UserSettings",
+        "InputType": "Textarea",
         "DefaultValue": "",
         "EnumValues": {},
         "IncludeInCommandLine": false
