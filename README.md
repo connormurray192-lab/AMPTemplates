@@ -84,6 +84,11 @@ file URL). Your world and settings are kept.
 
 ## Notes & troubleshooting
 
+- **Crash on start: "Mod X requires Y — Y is not installed"** — a client-only mod got installed
+  server-side because the pack's manifest marks it as required. The
+  [community exclusion list](https://github.com/itzg/docker-minecraft-server/blob/master/files/cf-exclude-include.json)
+  is applied automatically and covers most of these. If a pack ships one it misses, put the mod
+  named in the crash into **Additional Excluded Mods**, tick **Force Resynchronise**, and Update.
 - **"Files require manual download"** — a few pack authors disallow automated distribution of
   certain mods. mc-image-helper will list the offending files in the console with their project
   pages; download them manually and place them in the pack's `mods` folder, then Update again.

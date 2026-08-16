@@ -28,6 +28,49 @@
         "ExcludeFromImport": true
     },
     {
+        "DisplayName": "Additional Excluded Mods",
+        "Category": "Updates",
+        "Subcategory": "Modpack:build:-1",
+        "Description": "Extra client-only mods to keep off the server, as comma-separated CurseForge project slugs (e.g. colorwheel,oculus). A community list of known client-only mods is applied automatically, so this is only needed when a pack ships one it does not cover - the server crash will name the mod. Tick Force Resynchronise as well when changing this.",
+        "Keywords": "exclude,client,mods,remove,crash",
+        "FieldName": "ExcludeMods",
+        "ParamFieldName": "ExcludeMods",
+        "InputType": "text",
+        "DefaultValue": "",
+        "Placeholder": "colorwheel,oculus",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Force Included Mods",
+        "Category": "Updates",
+        "Subcategory": "Modpack:build:-1",
+        "Description": "Mods to install even though they are labelled client-only, as comma-separated CurseForge project slugs. Rarely needed - use it when a pack requires a mod that the exclusion list wrongly strips out.",
+        "Keywords": "include,force,mods,server",
+        "FieldName": "ForceIncludeMods",
+        "ParamFieldName": "ForceIncludeMods",
+        "InputType": "text",
+        "DefaultValue": "",
+        "EnumValues": {},
+        "IncludeInCommandLine": false
+    },
+    {
+        "DisplayName": "Force Resynchronise",
+        "Category": "Updates",
+        "Subcategory": "Modpack:build:-1",
+        "Description": "Re-evaluate the whole modpack on the next Update, so newly excluded mods are actually removed from an existing install. Leave off for normal updates - it makes them slower.",
+        "Keywords": "force,resync,synchronize,rebuild,clean",
+        "FieldName": "ForceSynchronise",
+        "ParamFieldName": "ForceSynchronise",
+        "InputType": "checkbox",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
+        "IncludeInCommandLine": false
+    },
+    {
         "DisplayName": "Accept Minecraft EULA",
         "Category": "Modded Minecraft:stadia_controller",
         "Subcategory": "Java and Memory:local_cafe:1",
