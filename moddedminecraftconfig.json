@@ -90,17 +90,19 @@
         "DisplayName": "Java Version",
         "Category": "Modded Minecraft:stadia_controller",
         "Subcategory": "Java and Memory:local_cafe:1",
-        "Description": "Java runtime used by the server, downloaded automatically. Match this to the pack's Minecraft version: 1.20.5+ needs Java 21, 1.17 - 1.20.4 needs Java 17, 1.12 - 1.16 needs Java 8. Click Update after changing this.",
-        "Keywords": "java,jre,jdk,version,runtime",
+        "Description": "Java runtime used by the server, downloaded automatically. Leave this on Automatic: the server starts on a sensible version and, if the pack's mod loader turns out to need a newer Java, it fetches that version and retries by itself. Only choose a specific version to override that - typically for very old packs.",
+        "Keywords": "java,jre,jdk,version,runtime,automatic",
         "FieldName": "JavaVersion",
         "ParamFieldName": "JavaVersion",
         "InputType": "enum",
-        "DefaultValue": "17",
+        "DefaultValue": "auto",
         "EnumValues": {
+            "auto": "Automatic (recommended)",
             "8": "Java 8 (Minecraft 1.12 - 1.16)",
             "11": "Java 11",
-            "17": "Java 17 (Minecraft 1.17 - 1.20.4)",
-            "21": "Java 21 (Minecraft 1.20.5+)"
+            "17": "Java 17 (Minecraft 1.18 - 1.20.4)",
+            "21": "Java 21 (Minecraft 1.20.5 - 1.21)",
+            "25": "Java 25 (newer NeoForge packs)"
         },
         "IncludeInCommandLine": false
     },
