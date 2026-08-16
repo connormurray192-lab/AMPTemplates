@@ -1,0 +1,38 @@
+[
+    {
+        "UpdateStageName": "Write Launch Script",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd '{{$FullBaseDir}}' && echo IyEvYmluL2Jhc2gKIyBNb2RkZWQgTWluZWNyYWZ0IGxhdW5jaCBzY3JpcHQgLSBnZW5lcmF0ZWQgYnkgdGhlIE1vZGRlZCBNaW5lY3JhZnQgQU1QIHRlbXBsYXRlIHVwZGF0ZSBzdGFnZXMuCiMgVXNhZ2U6IHN0YXJ0LW1vZGRlZC5zaCA8aW5pdGlhbE1lbU1CPiA8bWF4TWVtTUI+IDxqYXZhVmVyc2lvbj4gPGFjY2VwdEV1bGE+CmNkICIkKGRpcm5hbWUgIiQwIikiIHx8IGV4aXQgMQpJTT0iJHsxOi0yMDQ4fSIKWE09IiR7MjotNjE0NH0iCkpWPSIkezM6LTE3fSIKRVVMQT0iJHs0Oi1mYWxzZX0iCmlmIFsgIiRFVUxBIiAhPSAidHJ1ZSIgXSAmJiBbICIkRVVMQSIgIT0gIlRydWUiIF07IHRoZW4KICBlY2hvICJZb3UgbXVzdCBhY2NlcHQgdGhlIE1pbmVjcmFmdCBFVUxBIGJlZm9yZSB0aGUgc2VydmVyIGNhbiBzdGFydC4iCiAgZWNobyAiVGljayAnQWNjZXB0IE1pbmVjcmFmdCBFVUxBJyB1bmRlciBDb25maWd1cmF0aW9uID4gSmF2YSBhbmQgTWVtb3J5LCB0aGVuIHN0YXJ0IGFnYWluLiIKICBleGl0IDEKZmkKZWNobyAiZXVsYT10cnVlIiA+IGV1bGEudHh0CmlmIFsgLXggImpyZS8kSlYvYmluL2phdmEiIF07IHRoZW4KICBleHBvcnQgSkFWQV9IT01FPSIkUFdEL2pyZS8kSlYiCiAgZXhwb3J0IFBBVEg9IiRKQVZBX0hPTUUvYmluOiRQQVRIIgplbHNlCiAgZWNobyAiV0FSTklORzogYnVuZGxlZCBKYXZhICRKViBydW50aW1lIG5vdCBmb3VuZCwgZmFsbGluZyBiYWNrIHRvIHN5c3RlbSBqYXZhLiBSdW4gVXBkYXRlIHRvIGZpeCB0aGlzLiIKZmkKU0VSVkVSPSIiClsgLWYgLmluc3RhbGwtcmVzdWx0cy5lbnYgXSAmJiAuIC4vLmluc3RhbGwtcmVzdWx0cy5lbnYKaWYgWyAteiAiJFNFUlZFUiIgXSB8fCB7IFsgISAtZiAiJFNFUlZFUiIgXSAmJiBbICEgLWYgIiR7U0VSVkVSIyMqL30iIF07IH07IHRoZW4KICBmb3IgZiBpbiBydW4uc2ggc3RhcnQuc2ggc3RhcnRzZXJ2ZXIuc2ggZmFicmljLXNlcnZlci1sYXVuY2guamFyIHF1aWx0LXNlcnZlci1sYXVuY2guamFyIHNlcnZlci5qYXI7IGRvCiAgICBpZiBbIC1mICIkZiIgXTsgdGhlbiBTRVJWRVI9IiRQV0QvJGYiOyBicmVhazsgZmkKICBkb25lCmZpCmlmIFsgLXogIiRTRVJWRVIiIF07IHRoZW4KICBlY2hvICJObyBzZXJ2ZXIgZW50cnkgcG9pbnQgZm91bmQuIFNldCB0aGUgbW9kcGFjayBVUkwgYW5kIEFQSSBrZXkgaW4gQ29uZmlndXJhdGlvbiA+IE1vZHBhY2ssIHRoZW4gY2xpY2sgVXBkYXRlLiIKICBleGl0IDEKZmkKaWYgWyAhIC1mICIkU0VSVkVSIiBdICYmIFsgLWYgIiR7U0VSVkVSIyMqL30iIF07IHRoZW4KICBTRVJWRVI9IiRQV0QvJHtTRVJWRVIjIyovfSIKZmkKZWNobyAiTGF1bmNoaW5nICRTRVJWRVIgd2l0aCBKYXZhICRKViAoJHtJTX1NQiAtICR7WE19TUIpIgpjYXNlICIkU0VSVkVSIiBpbgogICouc2gpCiAgICBwcmludGYgIiVzXG4iICItWG1zJHtJTX1NIiAiLVhteCR7WE19TSIgPiB1c2VyX2p2bV9hcmdzLnR4dAogICAgY2htb2QgK3ggIiRTRVJWRVIiIDI+L2Rldi9udWxsCiAgICBleGVjIGJhc2ggIiRTRVJWRVIiIG5vZ3VpCiAgICA7OwogICopCiAgICBleGVjIGphdmEgIi1YbXMke0lNfU0iICItWG14JHtYTX1NIiAtamFyICIkU0VSVkVSIiBub2d1aQogICAgOzsKZXNhYwo= | base64 -d > start-modded.sh && chmod +x start-modded.sh && echo Launch script updated\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Download mc-image-helper",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd '{{$FullBaseDir}}'; MIH=1.66.1; if [ ! -x mc-image-helper-$MIH/bin/mc-image-helper ]; then echo Downloading mc-image-helper $MIH; rm -rf mc-image-helper-* mih.tgz >/dev/null 2>&1; wget -qO mih.tgz https://github.com/itzg/mc-image-helper/releases/download/$MIH/mc-image-helper-$MIH.tgz || { echo ERROR: mc-image-helper download failed; exit 1; }; tar -xzf mih.tgz && rm -f mih.tgz; fi; ln -sfn mc-image-helper-$MIH .mih && echo mc-image-helper $MIH ready\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Download Java Runtime",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd '{{$FullBaseDir}}'; A=x64; case $(uname -m) in aarch64|arm64) A=aarch64;; esac; for v in 21 {{JavaVersion}}; do if [ ! -x jre/$v/bin/java ]; then echo Downloading Temurin JRE $v; mkdir -p jre/$v && wget -qO jre$v.tgz https://api.adoptium.net/v3/binary/latest/$v/ga/linux/$A/jre/hotspot/normal/eclipse || { echo ERROR: JRE $v download failed; exit 1; }; tar -xzf jre$v.tgz -C jre/$v --strip-components=1 && rm -f jre$v.tgz; fi; done; echo Java runtimes ready\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Install CurseForge Modpack",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd '{{$FullBaseDir}}'; URL='{{PageURL}}'; if [ -z \\\"$URL\\\" ]; then echo Modpack Page URL is not set, skipping modpack install. Set it under Configuration, then click Update again.; exit 0; fi; export CF_API_KEY='{{CFAPIKey}}'; if [ -z \\\"$CF_API_KEY\\\" ]; then echo ERROR: A CurseForge API key is required. Get one free at https://console.curseforge.com and set it under Configuration.; exit 1; fi; export JAVA_HOME=\\\"$PWD/jre/21\\\"; export PATH=\\\"$JAVA_HOME/bin:$PATH\\\"; exec ./.mih/bin/mc-image-helper install-curseforge --modpack-page-url=\\\"$URL\\\" -o \\\"$PWD\\\" --results-file=.install-results.env\"",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    }
+]

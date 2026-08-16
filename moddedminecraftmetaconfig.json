@@ -1,0 +1,28 @@
+[
+    {
+        "ConfigFile": "server.properties",
+        "ConfigType": "kvp",
+        "ConfigFormat": "{0}{1}",
+        "Importable": true,
+        "Subsections": [
+            {
+                "Heading": "$root",
+                "SettingMappings": {
+                    "server-port=": "$ServerPort",
+                    "max-players=": "$MaxUsers",
+                    "motd=": "motd",
+                    "online-mode=": "online-mode",
+                    "white-list=": "white-list",
+                    "pvp=": "pvp",
+                    "difficulty=": "difficulty",
+                    "view-distance=": "view-distance",
+                    "allow-flight=": "allow-flight",
+                    "enable-command-block=": "enable-command-block",
+                    "spawn-protection=": "spawn-protection",
+                    "level-name=": "level-name",
+                    "level-seed=": "level-seed"
+                }
+            }
+        ]
+    }
+]

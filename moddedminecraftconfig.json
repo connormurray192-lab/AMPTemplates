@@ -1,0 +1,263 @@
+[
+    {
+        "DisplayName": "Modpack Page URL",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Modpack:cloud_download:1",
+        "Description": "Full CurseForge modpack page URL, e.g. https://www.curseforge.com/minecraft/modpacks/star-technology - the latest server files are installed automatically. To pin a specific version, use the URL of a specific file page, e.g. .../modpacks/star-technology/files/5678901. Click Update after changing this",
+        "Keywords": "modpack,curseforge,url,pack",
+        "FieldName": "PageURL",
+        "InputType": "text",
+        "ParamFieldName": "PageURL",
+        "DefaultValue": "",
+        "Placeholder": "https://www.curseforge.com/minecraft/modpacks/star-technology",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "CurseForge API Key",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Modpack:cloud_download:2",
+        "Description": "Required to download modpacks from CurseForge. Get a free key from https://console.curseforge.com (create an account, then API Keys). If the key contains a dollar sign, enter it exactly as issued",
+        "Keywords": "curseforge,api,key,token",
+        "FieldName": "CFAPIKey",
+        "InputType": "password",
+        "ParamFieldName": "CFAPIKey",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Accept Minecraft EULA",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Java and Memory:memory:1",
+        "Description": "You must accept the Minecraft End User Licence Agreement (https://aka.ms/MinecraftEULA) for the server to start",
+        "Keywords": "eula,licence,license,agreement",
+        "FieldName": "AcceptEULA",
+        "InputType": "checkbox",
+        "ParamFieldName": "AcceptEULA",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Java Version",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Java and Memory:memory:2",
+        "Description": "Java runtime used by the server. Match this to the pack's Minecraft version: 1.20.5+ needs Java 21, 1.17 - 1.20.4 needs Java 17, 1.12 - 1.16 needs Java 8. The runtime is downloaded automatically - click Update after changing this",
+        "Keywords": "java,jre,jdk,version",
+        "FieldName": "JavaVersion",
+        "InputType": "enum",
+        "ParamFieldName": "JavaVersion",
+        "DefaultValue": "17",
+        "EnumValues": {
+            "8": "Java 8 (Minecraft 1.12 - 1.16)",
+            "11": "Java 11",
+            "17": "Java 17 (Minecraft 1.17 - 1.20.4)",
+            "21": "Java 21 (Minecraft 1.20.5+)"
+        }
+    },
+    {
+        "DisplayName": "Initial Memory",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Java and Memory:memory:3",
+        "Description": "Initial Java heap size (-Xms)",
+        "Keywords": "memory,ram,xms,initial",
+        "FieldName": "InitialMemory",
+        "InputType": "number",
+        "MinValue": "512",
+        "ParamFieldName": "InitialMemory",
+        "DefaultValue": "2048",
+        "Placeholder": "2048",
+        "Suffix": "MB",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Memory",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Java and Memory:memory:4",
+        "Description": "Maximum Java heap size (-Xmx). Most modpacks recommend 4096 - 8192 MB. Leave headroom below the instance's total memory limit",
+        "Keywords": "memory,ram,xmx,maximum",
+        "FieldName": "MaxMemory",
+        "InputType": "number",
+        "MinValue": "1024",
+        "ParamFieldName": "MaxMemory",
+        "DefaultValue": "6144",
+        "Placeholder": "6144",
+        "Suffix": "MB",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Maximum number of players allowed on the server at one time",
+        "Keywords": "max,players,limit,max-players",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "max-players",
+        "DefaultValue": "20",
+        "Placeholder": "20",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Message (MOTD)",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:2",
+        "Description": "Message shown in the in-game server list",
+        "Keywords": "motd,message,name",
+        "FieldName": "motd",
+        "InputType": "text",
+        "ParamFieldName": "motd",
+        "DefaultValue": "A Modded Minecraft server powered by AMP",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Online Mode",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:3",
+        "Description": "Verify players against Mojang's authentication servers. Only disable for offline networks or proxy setups",
+        "Keywords": "online,mode,auth,premium",
+        "FieldName": "online-mode",
+        "InputType": "checkbox",
+        "ParamFieldName": "online-mode",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Whitelist",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:4",
+        "Description": "Only players on the whitelist can join. Manage the list with the whitelist command in the console",
+        "Keywords": "whitelist,white-list,allow",
+        "FieldName": "white-list",
+        "InputType": "checkbox",
+        "ParamFieldName": "white-list",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "View Distance",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Server:dns:5",
+        "Description": "Server-side view distance in chunks. Lower values improve performance on heavy modpacks",
+        "Keywords": "view,distance,view-distance,chunks",
+        "FieldName": "view-distance",
+        "InputType": "number",
+        "MinValue": "3",
+        "ParamFieldName": "view-distance",
+        "DefaultValue": "8",
+        "Placeholder": "8",
+        "Suffix": "chunks",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Difficulty",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:1",
+        "Description": "World difficulty",
+        "Keywords": "difficulty",
+        "FieldName": "difficulty",
+        "InputType": "enum",
+        "ParamFieldName": "difficulty",
+        "DefaultValue": "normal",
+        "EnumValues": {
+            "peaceful": "Peaceful",
+            "easy": "Easy",
+            "normal": "Normal (default)",
+            "hard": "Hard"
+        }
+    },
+    {
+        "DisplayName": "PvP",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:2",
+        "Description": "Allow players to damage each other",
+        "Keywords": "pvp,combat",
+        "FieldName": "pvp",
+        "InputType": "checkbox",
+        "ParamFieldName": "pvp",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Allow Flight",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:3",
+        "Description": "Allow flight in survival mode. Most modpacks need this enabled (jetpacks, angel rings etc) or players get kicked for flying",
+        "Keywords": "flight,fly,allow-flight",
+        "FieldName": "allow-flight",
+        "InputType": "checkbox",
+        "ParamFieldName": "allow-flight",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Enable Command Blocks",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:4",
+        "Description": "Many modpacks use command blocks for quests and map features",
+        "Keywords": "command,block,enable-command-block",
+        "FieldName": "enable-command-block",
+        "InputType": "checkbox",
+        "ParamFieldName": "enable-command-block",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Spawn Protection Radius",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:5",
+        "Description": "Radius in blocks around spawn that non-ops cannot modify. 0 disables spawn protection (recommended for modpacks)",
+        "Keywords": "spawn,protection,radius",
+        "FieldName": "spawn-protection",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "spawn-protection",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "blocks",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "World Name",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:6",
+        "Description": "Name of the world folder to load or create",
+        "Keywords": "level,world,name,level-name",
+        "FieldName": "level-name",
+        "InputType": "text",
+        "ParamFieldName": "level-name",
+        "DefaultValue": "world",
+        "Placeholder": "world",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "World Seed",
+        "Category": "Modded Minecraft:stadia_controller",
+        "Subcategory": "Gameplay:sports_esports:7",
+        "Description": "Seed for new world generation. Empty = random seed",
+        "Keywords": "level,seed,level-seed",
+        "FieldName": "level-seed",
+        "InputType": "text",
+        "ParamFieldName": "level-seed",
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
