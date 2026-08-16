@@ -1,9 +1,10 @@
 {
 	"id": "ef608a72-00c3-4ce7-ba3e-f7e6baec0ed3",
-	"authors": ["Connor"],
-	"origin": "",
-	"url": "",
+	"authors": ["connormurray192-lab"],
+	"origin": "https://github.com/connormurray192-lab/AMPTemplates.git",
+	"url": "https://github.com/connormurray192-lab/AMPTemplates",
 	"imagefile": "",
 	"prefix": "",
+	"default_branch": "main",
 	"repotype": "AppTemplates"
 }

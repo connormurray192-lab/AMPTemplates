@@ -39,11 +39,11 @@ files onto the host by hand does *not* work, no matter where you put them (see
    Configuration Repositories** and add:
 
    ```
-   <your-github-user>/<repo-name>:main
+   connormurray192-lab/AMPTemplates:main
    ```
 
 3. Restart the ADS instance (`ampinstmgr restart ADS01`) or use the refresh action on that page.
-   The ADS log should show `Updating remote source <your-github-user>/<repo-name>:main`.
+   The ADS log should show `Updating remote source connormurray192-lab/AMPTemplates:main`.
 
 4. **Create Instance** → select **Modded Minecraft** from the application list.
 
