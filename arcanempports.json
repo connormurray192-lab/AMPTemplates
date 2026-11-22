@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": 27015,
+        "Ref": "ServerPort",
+        "Name": "Server Port",
+        "Description": "Game traffic (UDP) plus the client asset and server-info endpoint (TCP). Both must be open for players to connect and download resources"
+    }
+]
